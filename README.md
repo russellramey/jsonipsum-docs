@@ -3,8 +3,8 @@ Offical documentation for JSON:IPSUM api service.
 
 ## Getting Set Up
 
-1. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
-2. `cd {reponame}`
+1. Clone *repository* to your hard machine.
+2. Enter your working directory: `cd path/to/repository`
 3. Initialize and start. You can either do this locally, or with Vagrant:
 
 ```shell
