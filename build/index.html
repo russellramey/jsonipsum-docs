@@ -1,0 +1,1443 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>JSON:IPSUM</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;Responses&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+        <div class="brand">
+            <p>JSON:IPSUM <span>API Documentation</span></p>
+        </div>
+
+        <div class="lang-selector">
+              <a href="#" data-language-name="Responses">Responses</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#features" class="toc-h2 toc-link" data-title="Features">Features</a>
+                  </li>
+                  <li>
+                    <a href="#use-cases" class="toc-h2 toc-link" data-title="Use Cases">Use Cases</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#endpoints" class="toc-h1 toc-link" data-title="Endpoints">Endpoints</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-word" class="toc-h2 toc-link" data-title="/get/word">/get/word</a>
+                  </li>
+                  <li>
+                    <a href="#get-sentence" class="toc-h2 toc-link" data-title="/get/sentence">/get/sentence</a>
+                  </li>
+                  <li>
+                    <a href="#get-paragraph" class="toc-h2 toc-link" data-title="/get/paragraph">/get/paragraph</a>
+                  </li>
+                  <li>
+                    <a href="#get-data" class="toc-h2 toc-link" data-title="/get/data">/get/data</a>
+                  </li>
+                  <li>
+                    <a href="#post-data" class="toc-h2 toc-link" data-title="/post/data">/post/data</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#parameters" class="toc-h1 toc-link" data-title="Parameters">Parameters</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#_length" class="toc-h2 toc-link" data-title="_length">_length</a>
+                  </li>
+                  <li>
+                    <a href="#_count" class="toc-h2 toc-link" data-title="_count">_count</a>
+                  </li>
+                  <li>
+                    <a href="#_template" class="toc-h2 toc-link" data-title="_template">_template</a>
+                  </li>
+                  <li>
+                    <a href="#_json" class="toc-h2 toc-link" data-title="_json">_json</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#constructors" class="toc-h1 toc-link" data-title="Constructors">Constructors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#__word" class="toc-h2 toc-link" data-title="__word">__word</a>
+                  </li>
+                  <li>
+                    <a href="#__phrase" class="toc-h2 toc-link" data-title="__phrase">__phrase</a>
+                  </li>
+                  <li>
+                    <a href="#__sentence" class="toc-h2 toc-link" data-title="__sentence">__sentence</a>
+                  </li>
+                  <li>
+                    <a href="#__paragraph" class="toc-h2 toc-link" data-title="__paragraph">__paragraph</a>
+                  </li>
+                  <li>
+                    <a href="#__alphanum" class="toc-h2 toc-link" data-title="__alphanum">__alphanum</a>
+                  </li>
+                  <li>
+                    <a href="#__number" class="toc-h2 toc-link" data-title="__number">__number</a>
+                  </li>
+                  <li>
+                    <a href="#__boolean" class="toc-h2 toc-link" data-title="__boolean">__boolean</a>
+                  </li>
+                  <li>
+                    <a href="#__date" class="toc-h2 toc-link" data-title="__date">__date</a>
+                  </li>
+                  <li>
+                    <a href="#__array" class="toc-h2 toc-link" data-title="__array">__array</a>
+                  </li>
+                  <li>
+                    <a href="#__object" class="toc-h2 toc-link" data-title="__object">__object</a>
+                  </li>
+                  <li>
+                    <a href="#__image" class="toc-h2 toc-link" data-title="__image">__image</a>
+                  </li>
+                  <li>
+                    <a href="#__file" class="toc-h2 toc-link" data-title="__file">__file</a>
+                  </li>
+                  <li>
+                    <a href="#__video" class="toc-h2 toc-link" data-title="__video">__video</a>
+                  </li>
+                  <li>
+                    <a href="#__coordinates" class="toc-h2 toc-link" data-title="__coordinates">__coordinates</a>
+                  </li>
+                  <li>
+                    <a href="#__address" class="toc-h2 toc-link" data-title="__address">__address</a>
+                  </li>
+                  <li>
+                    <a href="#__user" class="toc-h2 toc-link" data-title="__user">__user</a>
+                  </li>
+                  <li>
+                    <a href="#__template" class="toc-h2 toc-link" data-title="__template">__template</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#examples" class="toc-h1 toc-link" data-title="Examples">Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-text" class="toc-h2 toc-link" data-title="GET Text"><code>GET</code> Text</a>
+                  </li>
+                  <li>
+                    <a href="#get-basic-object" class="toc-h2 toc-link" data-title="GET Basic Object"><code>GET</code> Basic Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-template-object" class="toc-h2 toc-link" data-title="GET Template Object"><code>GET</code> Template Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-template-object-with-additional-data" class="toc-h2 toc-link" data-title="GET Template Object with additional data"><code>GET</code> Template Object with additional data</a>
+                  </li>
+                  <li>
+                    <a href="#get-array-of-template-objects" class="toc-h2 toc-link" data-title="GET Array of Template Objects"><code>GET</code> Array of Template Objects</a>
+                  </li>
+                  <li>
+                    <a href="#get-custom-object" class="toc-h2 toc-link" data-title="GET Custom Object"><code>GET</code> Custom Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-array-of-custom-objects" class="toc-h2 toc-link" data-title="GET Array of Custom Objects"><code>GET</code> Array of Custom Objects</a>
+                  </li>
+                  <li>
+                    <a href="#post-custom-object" class="toc-h2 toc-link" data-title="POST Custom Object"><code>POST</code> Custom Object</a>
+                  </li>
+                  <li>
+                    <a href="#post-array-of-custom-objects" class="toc-h2 toc-link" data-title="POST Array of Custom Objects"><code>POST</code> Array of Custom Objects</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='overview'>Overview</h1>
+<p>Welcome to <b>JSON:ISPUM</b>, a freely available RESTful API that returns randomly generated text (lorem ipsum) in JSON format to be used for design, development, wireframing, testing or placeholder purposes.</p>
+<h3 id='features'>Features</h3>
+<ul>
+<li>Language, library, and framework agnostic api.</li>
+<li>GET/POST request support, returns JSON response.</li>
+<li>Supports multiple <a href="#endpoints">endpoints</a> and <a href="#parameters">parameters</a>.</li>
+<li>Specific <a href="#constructors">constructor</a> values are used to generate text/data.</li>
+<li>Quick response times.</li>
+<li>Easy to use, no authentication needed.</li>
+<li>Randomly populate JSON object data with text, booleans, arrays, objects, dates, etc...</li>
+<li>Generate lorem ipsum and placeholder data with minimal effort.</li>
+<li>Several basic JSON <a href="#template">template</a> objects available.</li>
+<li>Take a look at some basic <a href="#examples">examples</a> to get started!</li>
+</ul>
+<h3 id='use-cases'>Use Cases</h3>
+<ul>
+<li>Quickly populate wireframes or working mockups with text or data.</li>
+<li>Experiment with JSON data structures and REST API responses.</li>
+<li>Test or debug front-end CRUD functionality without the need to setup a backend.</li>
+<li>Simulate &quot;real word&quot; content from users, a CMS, or production backend.</li>
+<li>Seed a database with placeholder data for development and testing.</li>
+<li>Create simple proof of concept interactions or requests.</li>
+<li>Randomly generate data objects quickly for automated testing.</li>
+<li>Simply generate lorem ipsum text programmatically.</li>
+</ul>
+<h1 id='authentication'>Authentication</h1>
+<p>There is <b>no authentication required</b> to use this API, simply make GET/POST requests in your language of choice to the endpoints listed in this documentation.</p>
+
+<aside class="notice">
+This API does not persist any data, responses are generated based on the request body and parameters.
+</aside>
+<h1 id='endpoints'>Endpoints</h1><h2 id='get-word'>/get/word</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/word/"</span>
+</code></pre>
+<blockquote>
+<p>JSON response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"consectetur"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Generate a random single word.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#count">_count</a></td>
+<td>1-100</td>
+<td>Set the number of words to be returned. <br><em>Default: 1</em></td>
+</tr>
+</tbody></table>
+<h2 id='get-sentence'>/get/sentence</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/sentence/"</span>
+</code></pre>
+<blockquote>
+<p>JSON response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Aliqua elit cillum ullamco dolor culpa quis qui sint Lorem eu dolor dolore magna quis aliquip in est consequat officia."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Generate a random sentence or sentences.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#length">_length</a></td>
+<td>short<br>medium<br>long</td>
+<td>Determine the length of the sentence returned.<br><em>Default: medium</em></td>
+</tr>
+<tr>
+<td><a href="#count">_count</a></td>
+<td>1-100</td>
+<td>Set the number of sentences to be returned. <br><em>Default: 1</em></td>
+</tr>
+</tbody></table>
+<h2 id='get-paragraph'>/get/paragraph</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/paragraph/"</span>
+</code></pre>
+<blockquote>
+<p>JSON response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Cillum sunt exercitation reprehenderit aliqua laborum sit cupidatat amet minim ipsum quis amet Lorem. Adipisicing qui cillum incididunt reprehenderit in aute id culpa ipsum esse minim. Enim sit nostrud eiusmod ipsum amet labore commodo nisi sint aliqua aliquip dolor esse mollit. Velit et proident pariatur labore consectetur non exercitation magna deserunt excepteur dolor. Lorem consectetur quis id consectetur in reprehenderit incididunt culpa incididunt pariatur duis in et ullamco nulla id deserunt anim sunt. Et adipisicing ad ad quis dolore anim est culpa est fugiat voluptate deserunt cillum occaecat Lorem nostrud."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Generate a random paragraph. With this endpoint multiple sentences will be returned instead of just a single sentence like with the <a href="#sentence">Sentence</a> endpoint.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#length">_length</a></td>
+<td>short<br>medium<br>long</td>
+<td>Determine the length of the sentence as well as the number of sentences in the paragraph. <br><em>Default: medium</em></td>
+</tr>
+<tr>
+<td><a href="#count">_count</a></td>
+<td>1-100</td>
+<td>Set the number of paragraphs to be returned. <br><em>Default: 1</em></td>
+</tr>
+</tbody></table>
+<h2 id='get-data'>/get/data</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/data?_template=post"</span>
+</code></pre>
+<blockquote>
+<p>JSON response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aliquip id aliqua nostrud sunt in duis dolore amet in aliquip cillum deserunt excepteur consectetur ullamco."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sit pariatur minim dolor magna elit fugiat. Cillum qui exercitation tempor occaecat culpa amet consectetur enim ad Lorem. Laboris elit consectetur ea dolor officia adipisicing laborum magna aliquip. Laboris dolor ad nulla ad et et occaecat sint officia proident. Minim occaecat irure cillum excepteur. Pariatur eu do dolore ipsum proident irure ullamco ad consequat deserunt. Culpa exercitation incididunt."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doyle1987"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-10-10"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1539129600000</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"likes"</span><span class="p">:</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"post"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns a block of text and/or data. Can create a JSON object of repeatable text blocks where various types of data/text can be requested.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#count">_count</a></td>
+<td>1-100</td>
+<td>Set the number of items to be returned.<br><em>Default: 1</em></td>
+</tr>
+<tr>
+<td><a href="#json">_json</a></td>
+<td>Stringified Object</td>
+<td>Use this parameter to pass a json object in a GET request. JSON must be stringified.</td>
+</tr>
+<tr>
+<td><a href="#template">_template</a></td>
+<td>user<br>post<br>blog<br>comment<br>todo<br>photo</td>
+<td>Return template based JSON object with all its properties.</td>
+</tr>
+</tbody></table>
+<h2 id='post-data'>/post/data</h2><pre class="highlight shell tab-shell"><code>POST <span class="s2">"https://api.jsonipsum.com/post/data"</span>
+
+body <span class="o">=</span> <span class="o">{</span>
+    <span class="s2">"title"</span>: <span class="s2">"__sentence"</span>,
+    <span class="s2">"body"</span>: <span class="s2">"__paragraph"</span>,
+    <span class="s2">"date"</span>: <span class="s2">"__date(past)"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>JSON response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem sunt aliqua cupidatat aliqua anim anim deserunt minim sunt nostrud eiusmod Lorem ut esse cupidatat."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sit est id aute incididunt reprehenderit labore aliqua incididunt ullamco amet irure consequat qui quis proident dolore. Do quis voluptate elit nisi amet dolor irure dolor quis Lorem ex occaecat. Dolore enim commodo dolore. Ea aliquip aliqua labore nulla nisi mollit ipsum amet elit commodo id ex nisi nisi reprehenderit. Occaecat incididunt deserunt proident in mollit tempor esse consequat cillum exercitation officia laborum non laboris. Anim eu nulla nulla. Commodo elit esse labore sunt ea duis sint consectetur tempor aliqua velit commodo est laborum deserunt. Elit laborum non voluptate cupidatat commodo pariatur minim excepteur laboris qui ut. Ad ex velit commodo eiusmod anim culpa quis. Elit tempor ullamco consectetur minim dolore cillum aute cupidatat mollit labore qui anim id."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-2-21"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1582264800000</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Making a POST request to this endpoint will allow you to send any valid JSON object as the requst body. Allowing you to easily create custom complex objects as a response. API <a href="#constructors">constructors</a> as values can be used to easily generate random text/data.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#count">_count</a></td>
+<td>1-100</td>
+<td>Set the number of items to be returned.<br><em>Default: 1</em></td>
+</tr>
+<tr>
+<td><a href="#template">_template</a></td>
+<td>user<br>post<br>blog<br>comment<br>todo<br>photo</td>
+<td>Return template based JSON object with all its properties.</td>
+</tr>
+</tbody></table>
+<h1 id='parameters'>Parameters</h1>
+<p>While <b>JSON:ISPUM</b> will accept any parameter passed along in the request, there are a few API specific parameters that can be used, and that will perform certain actions. API specific parameters always start with an underscore character ( _ ).</p>
+<h2 id='_length'>_length</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/sentence/?_length=short"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Velit duis ad dolor ullamco velit."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Set the length of the text returned for the specific endpoint.</p>
+<h3 id='supported-endpoints'>Supported Endpoints</h3>
+<p><a href="#sentence">sentence</a> | <a href="#paragraph">paragraph</a></p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://api.jsonipsum.com/get/sentence/?_length=value</code></p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>short</td>
+<td>Returns shorter length text <br><em>3-6 word sentences, 3-6 sentences in a paragraph</em></td>
+</tr>
+<tr>
+<td>medium</td>
+<td>Returns medium length text. <br><em>6-12 word sentences, 5-8 sentences in a paragraph</em></td>
+</tr>
+<tr>
+<td>long</td>
+<td>Returns longer length text. <br><em>12-18 word sentences, 7-12 sentences in a paragraph</em></td>
+</tr>
+<tr>
+<td>rand</td>
+<td>Returns random length text. <br><em>Default. 3-18 word sentences, 3-12 sentences in a paragraph</em></td>
+</tr>
+</tbody></table>
+<h2 id='_count'>_count</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/paragraph/?_count=3"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Sint sit ipsum do officia magna in. In aliqua do quis ut eu excepteur consequat proident ipsum cillum dolore. Voluptate sint aliqua officia anim voluptate elit laborum qui mollit non in cupidatat sit nulla."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Duis velit aliqua anim nostrud laboris cupidatat eu enim. Incididunt et duis pariatur aute velit elit Lorem commodo dolore sint dolore et consectetur. Occaecat labore sit tempor do aliqua proident. Aliqua ipsum amet magna aliqua labore eu officia mollit anim laborum mollit aute id culpa laborum aliqua ad. Laborum magna laboris laborum voluptate ipsum enim duis pariatur. Cupidatat aliquip adipisicing culpa sunt mollit irure consectetur cillum aliquip sit do eiusmod consectetur non elit velit in. Nostrud aliquip aute velit sint laboris sit. Magna veniam cillum in nostrud in enim mollit eu dolore excepteur pariatur do laboris. Occaecat nulla pariatur eu eu est est non pariatur adipisicing proident irure. Exercitation anim nulla. Quis proident cupidatat et nostrud sint eu consequat ipsum id excepteur aliqua magna anim ad tempor officia. Culpa do ut consectetur velit aliquip in ut ad et eu commodo in do cupidatat."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Mollit officia nostrud mollit occaecat consectetur pariatur. Pariatur proident non irure ex minim. Sint voluptate eu elit tempor Lorem et excepteur aliqua reprehenderit nisi duis Lorem. Nostrud sunt voluptate ea eiusmod. Laborum ad ut ea ea eu tempor culpa duis eu adipisicing ex elit aliquip Lorem enim sint adipisicing. Dolor sint deserunt elit aute excepteur officia ipsum. Consequat eiusmod est reprehenderit eiusmod ex dolore. Ipsum duis irure ipsum enim qui veniam dolor officia culpa cillum eiusmod. In reprehenderit eu consequat consequat culpa sit est esse. Qui ullamco Lorem irure ex consequat proident laborum. Adipisicing ex irure proident deserunt veniam."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Determine the number of items to return for a given endpoint.</p>
+<h3 id='supported-endpoints-2'>Supported Endpoints</h3>
+<p><a href="#word">word</a> | <a href="#sentence">sentence</a> | <a href="#paragraph">paragraph</a> | <a href="#data">data</a></p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://api.jsonipsum.com/get/paragraph/?_count=3</code></p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1-100</td>
+<td>Returns the requested number of items.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The <em>Count</em> parameter will add additional indexes to the returned json object.
+</aside>
+<h2 id='_template'>_template</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/data/?_template=post"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sint sunt id aliquip ut do anim occaecat Lorem."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pariatur non deserunt sunt commodo non Lorem sint quis sunt aliquip ad. Dolore do occaecat adipisicing consequat elit id. Aliqua qui sit aliquip duis est ad sunt duis amet id aute dolore esse velit nostrud ut quis."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mona1987"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-11-3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1604383200000</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"likes"</span><span class="p">:</span><span class="w"> </span><span class="mi">92</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Quickly return a pre-formatted JSON object. Supported template values are listed below.</p>
+<h3 id='supported-endpoints-3'>Supported Endpoints</h3>
+<p><a href="#data">data</a></p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://api.jsonipsum.com/get/data?_template=value</code></p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user</td>
+<td>Returns a User object with name, email, username, and address.</td>
+</tr>
+<tr>
+<td>post</td>
+<td>Returns a Post object with title, body, username, date, and likes count.</td>
+</tr>
+<tr>
+<td>blog</td>
+<td>Return a Blog object with title, excerpt, thumbnail, author, date, and comments count.</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Return a Comment object with body, username, reply count, likes count, and date.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>Return a Todo object with title, date, and complete boolean.</td>
+</tr>
+<tr>
+<td>photo</td>
+<td>Return a Photo object with image, title, caption, username, date, comment count, and likes count.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The <em>Count</em> parameter will add additional indexes to the returned json object.
+</aside>
+<h2 id='_json'>_json</h2><pre class="highlight shell tab-shell"><code>GET <span class="s1">'https://api.jsonipsum.com/get/data?_json={"title":"__sentence","body":"__paragraph","date":"__date(future)"}'</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Culpa adipisicing ea proident labore mollit."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem adipisicing consectetur fugiat Lorem nisi. Esse aliqua duis proident eiusmod voluptate commodo irure esse enim occaecat. Dolore elit dolor consectetur mollit et dolore aliqua culpa quis dolor ea proident sint. Magna veniam aliqua consectetur consequat dolor pariatur eu magna proident ipsum reprehenderit dolor duis Lorem culpa ad. Magna exercitation in commodo sunt in ex voluptate laborum quis dolor sint est exercitation tempor et. Eiusmod proident ea sint fugiat exercitation amet adipisicing nulla fugiat nulla ea enim dolor elit veniam sit qui. Exercitation nisi eiusmod ad nostrud et veniam incididunt dolore dolor et culpa elit aliqua ipsum."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1602374400000</span><span class="w">
+        </span><span class="p">}</span><span class="w">    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Pass a JSON object directly to API.</p>
+<h3 id='supported-endpoints-4'>Supported Endpoints</h3>
+<p><a href="#data">data</a></p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://api.jsonipsum.com/get/data?_json=value</code></p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Stringified Object</td>
+<td>This parameter accepts any valid JSON object as a string.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+JSON object must be stringified to be used in this context.
+</aside>
+<h1 id='constructors'>Constructors</h1>
+<p>Constructors are custom string values that will be parsed into generated data. Each constructor can support specific arguments that can be passed along using parentheses: <code>__constructor(args)</code>. Constructors always start with double underscores.</p>
+<h2 id='__word'>__word</h2><pre class="highlight plaintext"><code>__word
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"incididunt"</span><span class="w">
+</span></code></pre>
+<p>Return lorem ipsum word.</p>
+
+<p><code>__word(count)</code></p>
+
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>count</td>
+<td>integer</td>
+<td>Number of words to return in a single string <br><em>Default: 1</em></td>
+</tr>
+</tbody></table>
+<h2 id='__phrase'>__phrase</h2><pre class="highlight plaintext"><code>__phrase
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"Pariatur commodo id irure"</span><span class="w">
+</span></code></pre>
+<p>Return a short group of 3 - 6 words.</p>
+
+<p><code>__phrase</code></p>
+<h2 id='__sentence'>__sentence</h2><pre class="highlight plaintext"><code>__sentence
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"Pariatur consequat ut tempor dolor veniam tempor irure sunt."</span><span class="w">
+</span></code></pre>
+<p>Return a single properly formatted sentence with punctuation.</p>
+
+<p><code>__sentence(length)</code></p>
+
+<table><thead>
+<tr>
+<th>Length</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>short</td>
+<td>Returns shorter length text <br><em>3-6 word sentences</em></td>
+</tr>
+<tr>
+<td>medium</td>
+<td>Returns medium length text. <br><em>6-12 word sentences</em></td>
+</tr>
+<tr>
+<td>long</td>
+<td>Returns longer length text. <br><em>12-18 word sentences</em></td>
+</tr>
+<tr>
+<td>rand</td>
+<td>Returns random length text. <br><em>Default. 3-18 word sentences</em></td>
+</tr>
+</tbody></table>
+<h2 id='__paragraph'>__paragraph</h2><pre class="highlight plaintext"><code>__paragraph
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"Pariatur adipisicing eiusmod esse aliquip reprehenderit labore culpa officia elit voluptate sint irure amet. Et nisi qui do incididunt dolore enim sit. Dolore sit nostrud id enim aliquip sunt dolor irure est culpa aliqua tempor consequat velit labore quis do. Ex deserunt cupidatat est enim adipisicing elit sint ad tempor consectetur adipisicing consequat fugiat excepteur. Consectetur sit in laborum occaecat cupidatat do duis nostrud occaecat proident adipisicing fugiat enim ipsum eiusmod enim elit. Mollit adipisicing in. Proident adipisicing duis mollit commodo deserunt dolore voluptate aute eiusmod sunt aute labore. Fugiat aliqua non pariatur Lorem ut fugiat tempor dolor voluptate officia Lorem velit do duis cillum cupidatat."</span><span class="w">
+</span></code></pre>
+<p>Return a single string containing multiple sentences.</p>
+
+<p><code>__paragraph(length)</code></p>
+
+<table><thead>
+<tr>
+<th>Length</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>short</td>
+<td>Returns shorter length text <br><em>3-6 sentences in a paragraph</em></td>
+</tr>
+<tr>
+<td>medium</td>
+<td>Returns medium length text. <br><em>5-8 sentences in a paragraph</em></td>
+</tr>
+<tr>
+<td>long</td>
+<td>Returns longer length text. <br><em>7-12 sentences in a paragraph</em></td>
+</tr>
+<tr>
+<td>rand</td>
+<td>Returns random length text. <br><em>Default. 3-12 sentences in a paragraph</em></td>
+</tr>
+</tbody></table>
+<h2 id='__alphanum'>__alphanum</h2><pre class="highlight plaintext"><code>__alphanum(18)
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"mkLEw1sHMDDmKG6hiL"</span><span class="w">
+</span></code></pre>
+<p>Return a random alphanumeric string.</p>
+
+<p><code>__alphanum(count)</code></p>
+
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>count</td>
+<td>integer</td>
+<td>Number of characters to return in a single string <br><em>Default: 16</em></td>
+</tr>
+</tbody></table>
+<h2 id='__number'>__number</h2><pre class="highlight plaintext"><code>__number(100,200)
+</code></pre><pre class="highlight json tab-json"><code><span class="mi">164</span><span class="w">
+</span></code></pre>
+<p>Return a single integer from a defined range.</p>
+
+<p><code>__number(start,end)</code></p>
+
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start</td>
+<td>integer</td>
+<td>Range start <br><em>Default: 1</em></td>
+</tr>
+<tr>
+<td>end</td>
+<td>integer</td>
+<td>Range end <br><em>Default: 100</em></td>
+</tr>
+</tbody></table>
+<h2 id='__boolean'>__boolean</h2><pre class="highlight plaintext"><code>__boolean
+</code></pre><pre class="highlight json tab-json"><code><span class="kc">true</span><span class="w">
+</span></code></pre>
+<p>Return <em>true</em> or <em>false</em> randomly.</p>
+
+<p><code>__boolean</code></p>
+<h2 id='__date'>__date</h2><pre class="highlight plaintext"><code>__date
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-1-27"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1611727200000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return date object with timestamp and string representation.</p>
+
+<p><code>__date(range)</code></p>
+
+<table><thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>past</td>
+<td>Random date between today and 3 years ago</td>
+</tr>
+<tr>
+<td>today</td>
+<td>Todays date <br><em>Default</em></td>
+</tr>
+<tr>
+<td>future</td>
+<td>Random date between today and 3 years from now</td>
+</tr>
+</tbody></table>
+<h2 id='__array'>__array</h2><pre class="highlight plaintext"><code>__array(4,my array item)
+</code></pre><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"my array item"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"my array item"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"my array item"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"my array item"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><pre class="highlight plaintext"><code>__array(4,__sentence)
+</code></pre><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Labore aliquip veniam aliqua sit."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Id eiusmod anim eiusmod laboris nulla proident ipsum sint nostrud esse sunt eu commodo."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Esse reprehenderit mollit anim ex eu cupidatat irure minim pariatur pariatur mollit est fugiat."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Ullamco in incididunt cillum ex tempor aliquip cupidatat nostrud irure pariatur ipsum voluptate est anim cupidatat et."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Return array with specified number of items and values.</p>
+
+<p><code>__array(count,value)</code></p>
+
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>count</td>
+<td>integer</td>
+<td>Number of items in array</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string<br>__constructor</td>
+<td>Data value for each item in array</td>
+</tr>
+</tbody></table>
+<h2 id='__object'>__object</h2><pre class="highlight plaintext"><code>__object(key1:value1,key2:value2,key3:value3)
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value3"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight plaintext"><code>__object(word:__word,sentence:__sentence,paragraph:__paragraph)
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"word"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cillum"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sentence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Non enim irure aute cillum in aute excepteur labore culpa ea consectetur deserunt adipisicing et."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paragraph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do dolor est proident aute proident ad sunt et enim aliqua. Esse pariatur eu ipsum cillum ullamco irure amet dolore anim elit et elit incididunt ipsum occaecat ex. Mollit commodo nulla. Eu ex ipsum elit veniam exercitation irure aute elit nulla."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return object with nested <em>key:value</em> pairs.</p>
+
+<p><code>__object(key:value)</code></p>
+
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Object key</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string<br>__constructor</td>
+<td>Object key value</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+The <em>Key:Value</em> argument can be repeated by seperating multiple with commas.
+</aside>
+<h2 id='__image'>__image</h2><pre class="highlight plaintext"><code>__image(small)
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"landscape"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://via.placeholder.com/480x320"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"portrait"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://via.placeholder.com/320x480"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"square"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://via.placeholder.com/480x480"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return object with urls to landscape, portrait, and square versions of a placeholder image.</p>
+
+<p><code>__image(size)</code></p>
+
+<table><thead>
+<tr>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>small</td>
+<td>Small image size (~480px)</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>Medium size image (~640px) <br><em>Default</em></td>
+</tr>
+<tr>
+<td>large</td>
+<td>Large size image (~960px)</td>
+</tr>
+</tbody></table>
+<h2 id='__file'>__file</h2><pre class="highlight plaintext"><code>__file
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Placeholder.pdf"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://upload.wikimedia.org/wikipedia/commons/a/a4/Placeholder.pdf"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mime_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/pdf"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">2749</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return object with file name, file link, mime type, and random file size data for a sample file.</p>
+
+<p><code>__file</code></p>
+<h2 id='__video'>__video</h2><pre class="highlight plaintext"><code>__video
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87110435"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://vimeo.com/87110435"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"embed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://player.vimeo.com/video/87110435"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">106194</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return video object with id, url, embed url, and random duration data.</p>
+
+<p><code>__video</code></p>
+<h2 id='__coordinates'>__coordinates</h2><pre class="highlight plaintext"><code>__coordinates
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40.5343"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-64.0280"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return object with random latitude and longitude values.</p>
+
+<p><code>__coordinates</code></p>
+<h2 id='__address'>__address</h2><pre class="highlight plaintext"><code>__address
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"474 Linnie Cape"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Johnstonborough"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90062-1473"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nebraska"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kenya"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"countrycode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LC"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight plaintext"><code>__address(postal)
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"08087-0895"</span><span class="w">
+</span></code></pre>
+<p>Return address object with street, city, province, postal, country, and country code.</p>
+
+<p><code>__address(option)</code></p>
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>street</td>
+<td>Only return street value as string</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Only return city value as string</td>
+</tr>
+<tr>
+<td>postal</td>
+<td>Only return postal code value as string</td>
+</tr>
+<tr>
+<td>province</td>
+<td>Only return province value as string</td>
+</tr>
+<tr>
+<td>country</td>
+<td>Only return country value as string</td>
+</tr>
+<tr>
+<td>countrycode</td>
+<td>Only return abbreviated country code value as string</td>
+</tr>
+</tbody></table>
+<h2 id='__user'>__user</h2><pre class="highlight plaintext"><code>__user
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beaulah Macejkovic"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beaulah"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Macejkovic"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"beaulah1996@jsonipsum.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"beaulah1996"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight plaintext"><code>__user(email)
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"jocelyn2009@jsonipsum.com"</span><span class="w">
+</span></code></pre>
+<p>Return user object with name, email, username, and address.</p>
+
+<p><code>__user(option)</code></p>
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Only return name object</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Only return city value as string</td>
+</tr>
+<tr>
+<td>username</td>
+<td>Only return username as string</td>
+</tr>
+</tbody></table>
+<h2 id='__template'>__template</h2><pre class="highlight plaintext"><code>__template(post)
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sint sunt id aliquip ut do anim occaecat Lorem."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pariatur non deserunt sunt commodo non Lorem sint quis sunt aliquip ad. Dolore do occaecat adipisicing consequat elit id. Aliqua qui sit aliquip duis est ad sunt duis amet id aute dolore esse velit nostrud ut quis."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mona1987"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-11-3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1604383200000</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"likes"</span><span class="p">:</span><span class="w"> </span><span class="mi">92</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Quickly return a pre-formatted JSON objects.</p>
+
+<p><code>__template(option)</code></p>
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user</td>
+<td>Returns a User object with name, email, username, and address.</td>
+</tr>
+<tr>
+<td>post</td>
+<td>Returns a Post object with title, body, username, date, and likes count.</td>
+</tr>
+<tr>
+<td>blog</td>
+<td>Return a Blog object with title, excerpt, thumbnail, author, date, and comments count.</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Return a Comment object with body, username, reply count, likes count, and date.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>Return a Todo object with title, date, and complete boolean.</td>
+</tr>
+<tr>
+<td>photo</td>
+<td>Return a Photo object with image, title, caption, username, date, comment count, and likes count.</td>
+</tr>
+</tbody></table>
+<h1 id='examples'>Examples</h1>
+<p>Pariatur adipisicing eiusmod esse aliquip reprehenderit labore culpa officia elit voluptate sint irure amet. Et nisi qui do incididunt dolore enim sit. Dolore sit nostrud id enim aliquip sunt dolor irure est culpa aliqua tempor consequat velit labore quis do.</p>
+<h2 id='get-text'><code>GET</code> Text</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/sentence/?_length=short"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Velit duis ad dolor ullamco velit."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/sentence/?_count=4"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"Sint culpa et eu ad et laborum elit aliquip est ea sit ipsum tempor nisi incididunt."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Occaecat ut magna ullamco eiusmod minim exercitation in."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Amet duis ad."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Enim excepteur aliquip commodo qui."</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>The easiest way to start with the API is just to make a GET request to one of the direct lorem ipsum endpoints: <a href="#word">word</a>, <a href="#sentence">sentence</a>, <a href="#paragraph">paragraph</a>.</p>
+<h2 id='get-basic-object'><code>GET</code> Basic Object</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/data/?key1=__phrase&amp;key2=__sentence&amp;key3=My static value"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ex consectetur non sint dolore nulla"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Commodo excepteur do ea elit duis nostrud dolor qui fugiat dolor fugiat minim reprehenderit."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My static value"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Using the <a href="#data">data</a> endpoint, you can simply pass url query parameters with values to generate a JSON response. This example is using the provided <a href="#constructors">constructors</a> as a way to randomly generate values for a given key, along with a static string for <code>key3</code>.</p>
+<h2 id='get-template-object'><code>GET</code> Template Object</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/data/?_template=user"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oren Lindgren"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oren"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lindgren"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oren1995@jsonipsum.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oren1995"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Using the <a href="#data">data</a> endpoint along with the <a href="#template">_template</a> parameter, you can request pre-formatted JSON objects. If you pass additional key parameters, you can override any of the default keys/values.</p>
+<h2 id='get-template-object-with-additional-data'><code>GET</code> Template Object with additional data</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/data/?_template=user&amp;address=__address&amp;password=__alphanum(18)"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oren Lindgren"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oren"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lindgren"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oren1995@jsonipsum.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oren1995"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"667 Grady Circle"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"North Araceli"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"postal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87768-8549"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Louisiana"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint Vincent and the Grenadines"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"countrycode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CI"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tw4VghTwiQ2KECvonh"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>You can append additional data to prepared <a href="#template">_template</a> objects, by passing in additinal parameters with the request. The additional data values can be <a href="#constructors">__constructors</a> or static values.</p>
+<h2 id='get-array-of-template-objects'><code>GET</code> Array of Template Objects</h2><pre class="highlight shell tab-shell"><code>GET <span class="s2">"https://api.jsonipsum.com/get/data/?_template=user&amp;_count=3"</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bonita Grady"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bonita"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grady"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bonita1999@jsonipsum.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bonita1999"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deangelo Effertz"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deangelo"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Effertz"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deangelo1983@jsonipsum.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deangelo1983"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Elvera Hickle"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Elvera"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hickle"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elvera1991@jsonipsum.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elvera1991"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>To return more than a single object you can pass in the <code>_count</code> paramter with an integer value. Here you can see we requested <code>3</code> of the pre-formatted <code>user</code> objects.</p>
+<h2 id='get-custom-object'><code>GET</code> Custom Object</h2><pre class="highlight shell tab-shell"><code>GET <span class="s1">'https://api.jsonipsum.com/get/data?_json={"title":"__sentence","body":"__paragraph","date":"__date(past)"}'</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Culpa adipisicing ea proident labore mollit."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem adipisicing consectetur fugiat Lorem nisi. Esse aliqua duis proident eiusmod voluptate commodo irure esse enim occaecat. Dolore elit dolor consectetur mollit et dolore aliqua culpa quis dolor ea proident sint. Magna veniam aliqua consectetur consequat dolor pariatur eu magna proident ipsum reprehenderit dolor duis Lorem culpa ad. Magna exercitation in commodo sunt in ex voluptate laborum quis dolor sint est exercitation tempor et. Eiusmod proident ea sint fugiat exercitation amet adipisicing nulla fugiat nulla ea enim dolor elit veniam sit qui. Exercitation nisi eiusmod ad nostrud et veniam incididunt dolore dolor et culpa elit aliqua ipsum."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1602374400000</span><span class="w">
+        </span><span class="p">}</span><span class="w">    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Using the <a href="#data">data</a> endpoint along with the <a href="#json">_json</a> parameter, you can pass in any JSON object, as a string. The API will parse key/value pairs and return the object in the response.</p>
+
+<p>This example is using the provided <a href="#constructors">constructors</a> as a way to randomly generate values for the given keys.</p>
+<h2 id='get-array-of-custom-objects'><code>GET</code> Array of Custom Objects</h2><pre class="highlight shell tab-shell"><code>GET <span class="s1">'https://api.jsonipsum.com/get/data?_json={"title":"__sentence","body":"__paragraph","date":"__date(past)"}&amp;_count=3'</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dolor ullamco officia esse et aliquip pariatur sint occaecat."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minim incididunt laborum exercitation labore voluptate fugiat consectetur consectetur Lorem mollit culpa est duis. In Lorem reprehenderit labore ex anim aliquip aliqua fugiat. Consectetur aliquip laboris labore do aliquip. Dolor veniam Lorem voluptate laboris ut labore quis ullamco dolore eiusmod nisi proident."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-8-18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1534568400000</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anim amet eiusmod consectetur fugiat ex."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Elit ullamco nulla labore do dolore sint nostrud dolore ad. Officia culpa mollit non adipisicing officia tempor Lorem dolor nulla voluptate adipisicing ea. Labore aliquip sunt nisi velit. Magna magna eu adipisicing excepteur consectetur id proident velit consequat quis consequat tempor in exercitation. Aliqua aliquip cupidatat magna anim aute. Aute nostrud velit sunt tempor mollit irure labore eu voluptate deserunt officia tempor enim enim do. Cillum labore fugiat. Sit Lorem deserunt proident quis ad consequat voluptate laborum reprehenderit. Consequat eiusmod occaecat sit exercitation cillum magna officia incididunt et deserunt. Culpa consectetur ullamco tempor anim enim laboris do mollit. Ad tempor et fugiat ipsum Lorem eiusmod sunt eiusmod nulla cupidatat non proident duis voluptate pariatur."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1575266400000</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sint adipisicing commodo Lorem elit anim tempor in."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ullamco irure mollit non minim est. Enim aute laborum laboris ullamco sit ad eiusmod officia sunt fugiat eiusmod laborum esse ullamco culpa. Aliquip dolor nulla et commodo dolor ea. Enim cillum incididunt. Dolor cupidatat mollit aliqua non laboris fugiat enim excepteur culpa incididunt qui reprehenderit voluptate deserunt qui ullamco ipsum. Adipisicing ea exercitation occaecat tempor elit proident. Ad incididunt amet id nulla laboris anim eiusmod. Ipsum laborum do irure nostrud anim culpa elit sunt velit laborum nostrud proident mollit adipisicing. Esse pariatur occaecat pariatur enim est commodo dolore. Consectetur adipisicing non dolor non ipsum mollit exercitation velit aute excepteur minim labore qui in. Dolore sint magna deserunt dolor qui veniam tempor commodo deserunt esse excepteur velit. Dolore minim ut nisi consectetur."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-3-16"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584334800000</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>By passing the <code>_count</code> parameter, you can return multiple objects with a single request. This example is using the provided <a href="#constructors">constructors</a> as a way to randomly generate values for the given keys.</p>
+<h2 id='post-custom-object'><code>POST</code> Custom Object</h2><pre class="highlight shell tab-shell"><code>POST <span class="s1">'https://api.jsonipsum.com/post/data'</span>
+
+body <span class="o">=</span> <span class="o">{</span>
+    <span class="s2">"title"</span>: <span class="s2">"__sentence"</span>,
+    <span class="s2">"body"</span>: <span class="s2">"__paragraph"</span>,
+    <span class="s2">"date"</span>: <span class="s2">"__date(past)"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem sunt aliqua cupidatat aliqua anim anim deserunt minim sunt nostrud eiusmod Lorem ut esse cupidatat."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sit est id aute incididunt reprehenderit labore aliqua incididunt ullamco amet irure consequat qui quis proident dolore. Do quis voluptate elit nisi amet dolor irure dolor quis Lorem ex occaecat. Dolore enim commodo dolore. Ea aliquip aliqua labore nulla nisi mollit ipsum amet elit commodo id ex nisi nisi reprehenderit. Occaecat incididunt deserunt proident in mollit tempor esse consequat cillum exercitation officia laborum non laboris. Anim eu nulla nulla. Commodo elit esse labore sunt ea duis sint consectetur tempor aliqua velit commodo est laborum deserunt. Elit laborum non voluptate cupidatat commodo pariatur minim excepteur laboris qui ut. Ad ex velit commodo eiusmod anim culpa quis. Elit tempor ullamco consectetur minim dolore cillum aute cupidatat mollit labore qui anim id."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-2-21"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1582264800000</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Using the <a href="#data">data</a> endpoint with a POST request, you can pass in any JSON object as the request body. The API will parse key/value pairs and return the object in the response.</p>
+
+<p>This example is using the provided <a href="#constructors">constructors</a> as a way to randomly generate values for the given keys.</p>
+<h2 id='post-array-of-custom-objects'><code>POST</code> Array of Custom Objects</h2><pre class="highlight shell tab-shell"><code>POST <span class="s1">'https://api.jsonipsum.com/post/data'</span>
+
+body <span class="o">=</span> <span class="o">{</span>
+    <span class="s2">"title"</span>: <span class="s2">"__sentence"</span>,
+    <span class="s2">"body"</span>: <span class="s2">"__paragraph"</span>,
+    <span class="s2">"date"</span>: <span class="s2">"__date(past)"</span>,
+    <span class="s2">"_count"</span>: 3
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem sit minim quis elit laboris."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mollit in ex excepteur mollit do irure excepteur ex tempor. Aliquip laboris qui qui. Aliquip minim in ut amet veniam magna non mollit et dolor qui veniam anim do sint culpa do."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-8-3"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1533272400000</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mollit aliquip dolore consequat et qui culpa culpa."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nisi eiusmod duis dolore. Sunt irure qui id reprehenderit deserunt magna deserunt velit elit elit tempor occaecat. Eiusmod ea ipsum Lorem sint ad consectetur. Est sunt anim nulla sit deserunt minim enim esse eiusmod officia veniam et in adipisicing mollit adipisicing magna. Quis dolore enim labore ipsum minim culpa qui reprehenderit laborum tempor sunt labore nostrud aliquip. Qui elit pariatur veniam adipisicing occaecat fugiat Lorem occaecat sint consectetur non et veniam non magna et."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-4-22"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1524373200000</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deserunt do veniam sunt consequat enim eiusmod occaecat."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veniam dolor in ex dolore proident dolor ipsum excepteur adipisicing id. Commodo culpa cillum veniam ex duis elit. Irure ad ut ea ea anim sunt occaecat cillum. Magna do tempor. Amet proident nostrud. Ullamco velit eu exercitation ut deserunt eiusmod exercitation labore. Ea enim sint dolore do deserunt deserunt ex tempor tempor mollit irure ea. Anim ad deserunt eiusmod fugiat. Adipisicing amet proident ullamco esse sit velit anim ea irure deserunt qui reprehenderit veniam veniam. Magna laborum ipsum. Enim est consectetur."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-10-18"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1539820800000</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Just like with <code>GET</code> requests, you can request multiple objects from a response using the <code>POST</code> method and <a href="#data">data</a> endpoint. Here we include the <code>_count</code> parameter within the request body.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="Responses">Responses</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
