@@ -233,6 +233,9 @@
               </ul>
           </li>
           <li>
+            <a href="#support" class="toc-h1 toc-link" data-title="Support">Support</a>
+          </li>
+          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
@@ -391,6 +394,8 @@
 <li>Randomly generate data objects quickly for automated testing.</li>
 <li>Simply generate lorem ipsum text programmatically.</li>
 </ul>
+<h1 id='support'>Support</h1>
+<p>JSON:IPSUM is open source and available on Github. To report a bug, ask a question, feature request or other inquires, create an issue on the <a href="https://github.com/russellramey/jsonipsum" target="_blank">repository</a></p>
 <h1 id='authentication'>Authentication</h1>
 <p>There is <b>no authentication required</b> to use this API, simply make GET/POST requests in your language of choice to the endpoints listed in this documentation.</p>
 
@@ -416,7 +421,7 @@ This API does not persist any data, responses are generated based on the request
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#count">_count</a></td>
+<td><a href="#_count">_count</a></td>
 <td>1-100</td>
 <td>Set the number of words to be returned. <br><em>Default: 1</em></td>
 </tr>
@@ -440,12 +445,12 @@ This API does not persist any data, responses are generated based on the request
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#length">_length</a></td>
+<td><a href="#_length">_length</a></td>
 <td>short<br>medium<br>long</td>
 <td>Determine the length of the sentence returned.<br><em>Default: medium</em></td>
 </tr>
 <tr>
-<td><a href="#count">_count</a></td>
+<td><a href="#_count">_count</a></td>
 <td>1-100</td>
 <td>Set the number of sentences to be returned. <br><em>Default: 1</em></td>
 </tr>
@@ -469,12 +474,12 @@ This API does not persist any data, responses are generated based on the request
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#length">_length</a></td>
+<td><a href="#_length">_length</a></td>
 <td>short<br>medium<br>long</td>
 <td>Determine the length of the sentence as well as the number of sentences in the paragraph. <br><em>Default: medium</em></td>
 </tr>
 <tr>
-<td><a href="#count">_count</a></td>
+<td><a href="#_count">_count</a></td>
 <td>1-100</td>
 <td>Set the number of paragraphs to be returned. <br><em>Default: 1</em></td>
 </tr>
@@ -509,17 +514,17 @@ This API does not persist any data, responses are generated based on the request
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#count">_count</a></td>
+<td><a href="#_count">_count</a></td>
 <td>1-100</td>
 <td>Set the number of items to be returned.<br><em>Default: 1</em></td>
 </tr>
 <tr>
-<td><a href="#json">_json</a></td>
+<td><a href="#_json">_json</a></td>
 <td>Stringified Object</td>
 <td>Use this parameter to pass a json object in a GET request. JSON must be stringified.</td>
 </tr>
 <tr>
-<td><a href="#template">_template</a></td>
+<td><a href="#_template">_template</a></td>
 <td>user<br>post<br>blog<br>comment<br>todo<br>photo</td>
 <td>Return template based JSON object with all its properties.</td>
 </tr>
@@ -561,12 +566,12 @@ body <span class="o">=</span> <span class="o">{</span>
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#count">_count</a></td>
+<td><a href="#_count">_count</a></td>
 <td>1-100</td>
 <td>Set the number of items to be returned.<br><em>Default: 1</em></td>
 </tr>
 <tr>
-<td><a href="#template">_template</a></td>
+<td><a href="#_template">_template</a></td>
 <td>user<br>post<br>blog<br>comment<br>todo<br>photo</td>
 <td>Return template based JSON object with all its properties.</td>
 </tr>
@@ -584,7 +589,7 @@ body <span class="o">=</span> <span class="o">{</span>
 </span></code></pre>
 <p>Set the length of the text returned for the specific endpoint.</p>
 <h3 id='supported-endpoints'>Supported Endpoints</h3>
-<p><a href="#sentence">sentence</a> | <a href="#paragraph">paragraph</a></p>
+<p><a href="#get-sentence">/get/sentence</a> | <a href="#get-paragraph">/get/paragraph</a></p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.jsonipsum.com/get/sentence/?_length=value</code></p>
 
@@ -624,7 +629,7 @@ body <span class="o">=</span> <span class="o">{</span>
 </span></code></pre>
 <p>Determine the number of items to return for a given endpoint.</p>
 <h3 id='supported-endpoints-2'>Supported Endpoints</h3>
-<p><a href="#word">word</a> | <a href="#sentence">sentence</a> | <a href="#paragraph">paragraph</a> | <a href="#data">data</a></p>
+<p><a href="#get-word">/get/word</a> | <a href="#get-sentence">/get/sentence</a> | <a href="#get-paragraph">/get/paragraph</a> | <a href="#get-data">/get/data</a> | <a href="#post-data">/post/data</a></p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://api.jsonipsum.com/get/paragraph/?_count=3</code></p>
 
@@ -664,7 +669,7 @@ The <em>Count</em> parameter will add additional indexes to the returned json ob
 </span></code></pre>
 <p>Quickly return a pre-formatted JSON object. Supported template values are listed below.</p>
 <h3 id='supported-endpoints-3'>Supported Endpoints</h3>
-<p><a href="#data">data</a></p>
+<p><a href="#get-data">/get/data</a> | <a href="#post-data">/post/data</a></p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://api.jsonipsum.com/get/data?_template=value</code></p>
 
@@ -721,7 +726,7 @@ The <em>Count</em> parameter will add additional indexes to the returned json ob
 </span></code></pre>
 <p>Pass a JSON object directly to API.</p>
 <h3 id='supported-endpoints-4'>Supported Endpoints</h3>
-<p><a href="#data">data</a></p>
+<p><a href="#get-data">/get/data</a></p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://api.jsonipsum.com/get/data?_json=value</code></p>
 
