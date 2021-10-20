@@ -43,6 +43,10 @@ Welcome to <b>JSON:ISPUM</b>, a freely available RESTful API that returns random
 - Randomly generate data objects quickly for automated testing.
 - Simply generate lorem ipsum text programmatically.
 
+# Support
+
+JSON:IPSUM is open source and available on Github. To report a bug, ask a question, feature request or other inquires, create an issue on the <a href="https://github.com/russellramey/jsonipsum" target="_blank">repository</a>
+
 # Authentication
 
 There is <b>no authentication required</b> to use this API, simply make GET/POST requests in your language of choice to the endpoints listed in this documentation.

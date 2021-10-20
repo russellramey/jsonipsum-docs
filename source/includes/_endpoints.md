@@ -18,7 +18,7 @@ Generate a random single word.
 
 Parameter | Value | Description
 --------- | ------- | -----------
-[_count](#count) | 1-100 | Set the number of words to be returned. <br>_Default: 1_
+[_count](#_count) | 1-100 | Set the number of words to be returned. <br>_Default: 1_
 
 
 
@@ -40,8 +40,8 @@ Generate a random sentence or sentences.
 
 Parameter | Value | Description
 --------- | ------- | -----------
-[_length](#length) | short<br>medium<br>long | Determine the length of the sentence returned.<br>_Default: medium_
-[_count](#count) | 1-100 | Set the number of sentences to be returned. <br>_Default: 1_
+[_length](#_length) | short<br>medium<br>long | Determine the length of the sentence returned.<br>_Default: medium_
+[_count](#_count) | 1-100 | Set the number of sentences to be returned. <br>_Default: 1_
 
 
 
@@ -63,8 +63,8 @@ Generate a random paragraph. With this endpoint multiple sentences will be retur
 
 Parameter | Value | Description
 --------- | ------- | -----------
-[_length](#length) | short<br>medium<br>long | Determine the length of the sentence as well as the number of sentences in the paragraph. <br>_Default: medium_
-[_count](#count) | 1-100 | Set the number of paragraphs to be returned. <br>_Default: 1_
+[_length](#_length) | short<br>medium<br>long | Determine the length of the sentence as well as the number of sentences in the paragraph. <br>_Default: medium_
+[_count](#_count) | 1-100 | Set the number of paragraphs to be returned. <br>_Default: 1_
 
 
 
@@ -97,9 +97,9 @@ This endpoint returns a block of text and/or data. Can create a JSON object of r
 
 Parameter | Value | Description
 --------- | ------- | -----------
-[_count](#count) | 1-100 | Set the number of items to be returned.<br>_Default: 1_
-[_json](#json) | Stringified Object | Use this parameter to pass a json object in a GET request. JSON must be stringified.
-[_template](#template) | user<br>post<br>blog<br>comment<br>todo<br>photo | Return template based JSON object with all its properties.
+[_count](#_count) | 1-100 | Set the number of items to be returned.<br>_Default: 1_
+[_json](#_json) | Stringified Object | Use this parameter to pass a json object in a GET request. JSON must be stringified.
+[_template](#_template) | user<br>post<br>blog<br>comment<br>todo<br>photo | Return template based JSON object with all its properties.
 
 
 
@@ -139,5 +139,5 @@ Making a POST request to this endpoint will allow you to send any valid JSON obj
 
 Parameter | Value | Description
 --------- | ------- | -----------
-[_count](#count) | 1-100 | Set the number of items to be returned.<br>_Default: 1_
-[_template](#template) | user<br>post<br>blog<br>comment<br>todo<br>photo | Return template based JSON object with all its properties.
+[_count](#_count) | 1-100 | Set the number of items to be returned.<br>_Default: 1_
+[_template](#_template) | user<br>post<br>blog<br>comment<br>todo<br>photo | Return template based JSON object with all its properties.

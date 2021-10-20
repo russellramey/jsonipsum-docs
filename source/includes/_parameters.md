@@ -18,7 +18,7 @@ Set the length of the text returned for the specific endpoint.
 
 ### Supported Endpoints
 
-[sentence](#sentence) | [paragraph](#paragraph)
+[/get/sentence](#get-sentence) | [/get/paragraph](#get-paragraph)
 
 ### HTTP Request
 
@@ -53,7 +53,7 @@ Determine the number of items to return for a given endpoint.
 
 ### Supported Endpoints
 
-[word](#word) | [sentence](#sentence) | [paragraph](#paragraph) | [data](#data)
+[/get/word](#get-word) | [/get/sentence](#get-sentence) | [/get/paragraph](#get-paragraph) | [/get/data](#get-data) | [/post/data](#post-data)
 
 ### HTTP Request
 
@@ -96,7 +96,7 @@ Quickly return a pre-formatted JSON object. Supported template values are listed
 
 ### Supported Endpoints
 
-[data](#data)
+[/get/data](#get-data) | [/post/data](#post-data)
 
 ### HTTP Request
 
@@ -141,7 +141,7 @@ Pass a JSON object directly to API.
 
 ### Supported Endpoints
 
-[data](#data)
+[/get/data](#get-data)
 
 ### HTTP Request
 
